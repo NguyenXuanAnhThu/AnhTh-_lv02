@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#define pi 3.141592654
+void main()
+{
+    int n;
+    printf("Moi nhap gia tri cua n\n");
+    scanf("%d",&n);
+switch (n)
+  case 1:
+      {
+        float x1,y1,x2,y2,x3,y3,x4,y4;
+        printf ("nhap toa do cua A\n");
+        scanf ("%f",&x1);
+        scanf ("%f",&y1);
+        printf ("nhap toa do cua B\n");
+        scanf ("%f",&x2);
+        scanf ("%f",&y2);
+        printf ("nhap toa do cua C\n");
+        scanf ("%f",&x3);
+        scanf ("%f",&y3);
+        float S=(abs((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1)))/2;
+        printf ("Dien tich tam giac ABC la:=%f", S);
+        break;
+      }
+  case 2:
+    {
+        float a,b,x1,y1;
+    printf("nhap toa do tam I\n");
+    scanf("%f",&a);
+    scanf("%f",&b);
+    printf("nhap toa do diem A nam tren duong tron tam I\n");
+    scanf("%f",&x1);
+    scanf("%f",&y1);
+    //trong do IA la ban kinh hinh tron tam I
+    float IA=sqrt(pow(a-x1,2)+pow(b-y1,2));
+    float S=pi*(pow(IA,2));
+    printf("dien tich hinh tron la:=%f",S);
+    break;
+    }
+case 3:
+    {
+         float x1,y1,x2,y2,x3,y3,x4,y4;
+    printf ("nhap toa do cua A\n");
+    scanf ("%f",&x1);
+    scanf ("%f",&y1);
+    printf ("nhap toa do cua B\n");
+    scanf ("%f",&x2);
+    scanf ("%f",&y2);
+    printf ("nhap toa do cua C\n");
+    scanf ("%f",&x3);
+    scanf ("%f",&y3);
+    printf ("nhap toa do cua D\n");
+    scanf ("%f",&x4);
+    scanf ("%f",&y4);
+    float AC=sqrt(pow(x3-x1,2)+pow(y3-y1,2));
+    float AD=sqrt(pow(x4-x1,2)+pow(y4-y1,2));
+    float DC=sqrt(pow(x3-x4,2)+pow(y3-y4,2));
+    float Stg=(AD*DC)/2;
+    float S=2*Stg;
+    printf("Dien tich hinh chu nhat :=%.1f",S);
+    break;
+    }
+case 4:
+    {
+         float x1,y1,x2,y2,x3,y3,x4,y4;
+    printf ("nhap toa do cua A\n");
+    scanf ("%f",&x1);
+    scanf ("%f",&y1);
+    printf ("nhap toa do cua B\n");
+    scanf ("%f",&x2);
+    scanf ("%f",&y2);
+    printf ("nhap toa do cua C\n");
+    scanf ("%f",&x3);
+    scanf ("%f",&y3);
+    printf ("nhap toa do cua D\n");
+    scanf ("%f",&x4);
+    scanf ("%f",&y4);
+    float AB=sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+    float BC=sqrt(pow(x3-x2,2)+pow(y3-y2,2));
+    float S=AB*BC;
+    printf("dien tich hinh vuong la:=%0.1f",S);
+    break;
+    }
+getch();
+}
