@@ -5,12 +5,11 @@
 void main()
 {
     int n;
+    float x1,y1,x2,y2,x3,y3,x4,y4,a,b;
     printf("Moi nhap gia tri cua n\n");
     scanf("%d",&n);
-switch (n)
-  case 1:
+if (n==1)
       {
-        float x1,y1,x2,y2,x3,y3,x4,y4;
         printf ("nhap toa do cua A\n");
         scanf ("%f",&x1);
         scanf ("%f",&y1);
@@ -22,11 +21,9 @@ switch (n)
         scanf ("%f",&y3);
         float S=(abs((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1)))/2;
         printf ("Dien tich tam giac ABC la:=%f", S);
-        break;
       }
-  case 2:
+else if (n==2)
     {
-        float a,b,x1,y1;
     printf("nhap toa do tam I\n");
     scanf("%f",&a);
     scanf("%f",&b);
@@ -37,11 +34,9 @@ switch (n)
     float IA=sqrt(pow(a-x1,2)+pow(b-y1,2));
     float S=pi*(pow(IA,2));
     printf("dien tich hinh tron la:=%f",S);
-    break;
     }
-case 3:
+else if (n==3)
     {
-         float x1,y1,x2,y2,x3,y3,x4,y4;
     printf ("nhap toa do cua A\n");
     scanf ("%f",&x1);
     scanf ("%f",&y1);
@@ -60,11 +55,9 @@ case 3:
     float Stg=(AD*DC)/2;
     float S=2*Stg;
     printf("Dien tich hinh chu nhat :=%.1f",S);
-    break;
     }
-case 4:
+else if (n==4)
     {
-         float x1,y1,x2,y2,x3,y3,x4,y4;
     printf ("nhap toa do cua A\n");
     scanf ("%f",&x1);
     scanf ("%f",&y1);
@@ -81,7 +74,6 @@ case 4:
     float BC=sqrt(pow(x3-x2,2)+pow(y3-y2,2));
     float S=AB*BC;
     printf("dien tich hinh vuong la:=%0.1f",S);
-    break;
     }
 getch();
 }
